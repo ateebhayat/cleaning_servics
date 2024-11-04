@@ -1,0 +1,52 @@
+@import '@constants/typography.scss';
+@import '@constants/colors.scss';
+@import '@constants/media.scss';
+@import '@constants/responsive.scss';
+.banner {
+    padding: 9rem 0px 6rem;
+
+    background-image: url('../../assets/images/about-banner.png');
+    width: 100%;
+    align-items: center;
+    height: 410px;
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    h3 {
+        @include responsiveProperty(
+            (
+                font-size: 48
+            )
+        );
+        font-family: $font-secondary;
+        color: #fff;
+        font-weight: 700;
+        line-height: 60px;
+    }
+    p {
+        @include responsiveProperty(
+            (
+                font-size: 28
+            )
+        );
+        color: #fff;
+        font-family: $font-Inter;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 475px) {
+    .banner {
+        height: 200px !important;
+        padding: 0 0;
+
+        h3 {
+            font-size: 20px !important;
+
+            line-height: 20px !important;
+        }
+        p {
+            font-size: 14px !important;
+        }
+    }
+}

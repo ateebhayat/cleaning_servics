@@ -1,0 +1,87 @@
+@import '@constants/typography.scss';
+@import '@constants/colors.scss';
+@import '@constants/media.scss';
+@import '@constants/responsive.scss';
+
+.campaign-container {
+    .campaign {
+        display: flex;
+    }
+
+    h4 {
+        font-size: 19.6px;
+        font-family: $font-primary;
+        color: $secondary-color;
+        line-height: 30.49px;
+    }
+
+    hr {
+        width: 66px;
+        margin-left: 10px;
+        border: 1.09 px solid #000 25%;
+    }
+
+    p {
+        @include responsiveProperty(
+            (
+                font-size: 42.46
+            )
+        );
+        font-family: $font-secondary;
+        font-weight: 700;
+        line-height: 54.44px;
+        max-width: 575px;
+        text-transform: capitalize;
+    }
+
+    .donate-btn {
+        background: #fff;
+        color: $primary-color;
+        border: 1px solid $primary-color;
+        border-radius: 7px;
+        text-align: center;
+        width: 290px;
+        padding: 10px 20px;
+    }
+
+    .card-title.h5 {
+        color: #67b346;
+        font-size: 17.42px;
+        font-weight: 600;
+        font-family: $font-primary;
+        line-height: 28.31px;
+        text-transform: capitalize;
+    }
+
+    p.card-text {
+        font-size: 15.24px !important;
+        line-height: 23.95px;
+        font-family: $font-primary;
+        font-weight: 500;
+        text-transform: capitalize;
+        color: #afafaf;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+
+    .meta-title {
+        color: #000 !important;
+        font-size: 21.78px;
+        line-height: 30.49px;
+    }
+
+    .campaign-card {
+        border-radius: unset;
+        border: unset;
+        box-shadow: 0 0 20px -19px;
+        padding-bottom: 10px;
+        border-radius: 16px !important;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .campaign-card .card-img-top {
+        border-radius: 16px 16px 0px 0px !important;
+    }
+}

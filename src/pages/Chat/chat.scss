@@ -1,0 +1,38 @@
+@import '@constants/typography.scss';
+@import '@constants/colors.scss';
+@import '@constants/media.scss';
+@import '@constants/responsive.scss';
+.chat-container {
+    .card {
+        border-radius: unset;
+    }
+    .badge {
+        border-radius: 50% !important;
+        background: #373737 !important;
+        font-weight: 400 !important;
+        font-family: $font-Inter;
+        margin-left: 8rem;
+    }
+}
+@import '@constants/colors.scss';
+@import '@constants/typography.scss';
+
+.main-panel {
+    position: relative;
+    float: right;
+    width: calc(100% - 260px); // total width minus sidebar width
+    transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    background-color: $container-bg-color;
+
+    .main-content-wrapper {
+        padding: 30px 20px;
+        min-height: calc(100vh - 123px);
+        max-width: 2560px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.full-width-panel {
+    width: 100%;
+}

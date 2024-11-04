@@ -1,0 +1,15 @@
+@import '@constants/colors.scss';
+
+.confirmation-modal {
+    .custom-button {
+        min-width: 100px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .confirm {
+        background: $primary-color !important;
+        border: unset;
+    }
+}

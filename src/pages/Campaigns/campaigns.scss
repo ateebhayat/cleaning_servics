@@ -1,0 +1,303 @@
+@import '@constants/typography.scss';
+@import '@constants/colors.scss';
+@import '@constants/media.scss';
+@import '@constants/responsive.scss';
+.campaign-container-spacing {
+    padding: 4rem 0;
+}
+.campaigns-page {
+    .campaign-card {
+        box-shadow: 0px 12px 30px 0px rgba(37, 42, 52, 0.08);
+    }
+    background-image: url('../../assets/images/effect.png');
+    background-repeat: no-repeat;
+    background-position: 0 107%;
+    h2 {
+        margin-top: 6px;
+        font-family: $font-Inter;
+
+        font-size: 18px;
+        font-weight: 500;
+        color: #140342;
+    }
+    .heading-cont {
+        margin-bottom: 25px;
+    }
+    .clear-btn {
+        border: unset;
+        background: unset;
+        border: 1.25px solid #e4e4e4;
+        border-radius: 37.5px;
+
+        font-family: $font-Inter;
+        font-size: 17.5px;
+        font-weight: 400;
+        color: #726c6c;
+    }
+    .recent-btn {
+        margin-top: 6px;
+        border: unset;
+        background: unset;
+        border: 1.25px solid #e4e4e4;
+        border-radius: 37.5px;
+        font-family: $font-Inter;
+        font-size: 17.5px;
+        font-weight: 400;
+        button {
+            color: #726c6c;
+        }
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .campaign-container-spacing {
+        padding: 2rem 1rem;
+    }
+    .campaigns-page {
+        .heading-cont {
+            padding: 1rem 0 !important;
+            margin: unset !important;
+        }
+
+        h2 {
+            font-size: 14px !important;
+            margin: unset !important;
+        }
+    }
+    .campign-detail-container {
+        .detail-img {
+            width: 100vw;
+            height: auto;
+        }
+    }
+}
+
+@media screen and (min-width: 476px) and (max-width: 990px) {
+    .campaign-container-spacing {
+        padding: 2rem 0;
+    }
+    .campaigns-page {
+        .recent-btn {
+            margin-top: unset !important;
+        }
+        .heading-cont {
+            padding: 1.5rem 0 !important;
+            margin: unset !important;
+        }
+    }
+}
+
+// Campaign Detail Page Styles
+
+.campign-detail-container {
+    padding: 6.4rem 0 0 0;
+    .container-spacing {
+        padding-inline-end: 5rem !important;
+    }
+    .camp-heading-text {
+        font-family: $font-secondary;
+        color: $primary-color;
+        font-size: 42px;
+        font-weight: 700;
+    }
+    h5.camp-heading-text {
+        font-family: $font-Inter;
+        color: $primary-color;
+        font-size: 28px;
+        font-weight: 700;
+    }
+    .camp-detail-card {
+        box-shadow: 0px 10px 27px 0px rgba(37, 42, 52, 0.08) !important;
+        border: unset !important;
+        border-radius: 45px !important;
+        padding: 2rem 2rem;
+        margin-top: 30px !important;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 150px; /* Set the desired distance from the top */
+        z-index: 1000;
+        div:nth-child(4) {
+            .custom-marker {
+                color: $secondary-color;
+                text-decoration: underline;
+                font-family: $font-Inter;
+                font-size: 14px;
+                font-weight: 400;
+                &::marker {
+                    color: $secondary-color;
+                }
+            }
+            > div {
+                margin-block: 1rem;
+
+                > span {
+                    font-size: 16px;
+                    font-family: $font-Inter;
+                    font-weight: 500;
+                    max-width: 150px;
+                }
+                > button {
+                    background: unset;
+                    color: #1d364d;
+                    font-size: 16px;
+                    padding: 0.5rem 1.5rem !important;
+                    border: 1px solid #e0e0e0;
+                    border-radius: 35px;
+                }
+            }
+        }
+        .circle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+        }
+
+        .lines {
+            @extend .circle;
+            background-color: #d9f5ee;
+        }
+
+        .gray-bg {
+            @extend .circle;
+            background-color: #ededed;
+            margin-inline-end: 0.9rem;
+        }
+
+        div:nth-child(3) {
+            > p {
+                font-size: 18px !important;
+                font-family: $font-Inter;
+                font-weight: 400;
+                color: #252a34;
+                > span {
+                    font-size: 18px !important;
+                    font-family: $font-Inter;
+                    font-weight: 700;
+                    color: #252a34;
+                }
+            }
+        }
+    }
+    .charity-desc {
+        font-family: $font-Inter;
+        font-size: 18px;
+        font-weight: 500;
+        color: #afafaf;
+    }
+    .org-name {
+        font-family: $font-Inter;
+        font-size: 18px;
+        font-weight: 400;
+        color: #3c3c3c;
+    }
+    .person-icon {
+        border-radius: 50%;
+        background: #edf0f8;
+    }
+    .detail-img {
+        width: 900px;
+        height: 600px;
+        > img {
+            width: 100%;
+            margin-inline-start: -46px;
+        }
+    }
+    .btn-camp {
+        button:nth-child(1) {
+            margin-inline-end: 1rem;
+        }
+        > button {
+            width: 50%;
+            background: $secondary-color;
+            border: unset;
+            color: #fff;
+            padding: 0.6rem 8px;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .campign-detail-container {
+        .container-spacing {
+            padding-inline-end: 1rem !important;
+        }
+        padding: 1rem 0 0 0;
+        .camp-heading-text {
+            font-size: 20px;
+            text-align: center;
+        }
+        h5.camp-heading-text {
+            font-size: 18px;
+        }
+        .org-name {
+            font-size: 14px !important;
+        }
+
+        .charity-desc {
+            font-size: 14px !important;
+        }
+        .detail-img {
+            width: 100% !important;
+            height: auto !important;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            > img {
+                width: 100%;
+                margin-inline-start: -46px;
+            }
+        }
+    }
+    .btn-camp {
+        button:nth-child(1) {
+            margin-inline-end: 0.2rem !important;
+        }
+    }
+    .date-published > span {
+        font-size: 14px !important;
+    }
+}
+.person-icon {
+    padding: 10px 14px 13px !important;
+}
+
+.org-location {
+    margin-left: 43px;
+    margin-top: -4px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #888888;
+}
+@media screen and (min-width: 801px) and (max-width: 1400px) {
+    .campign-detail-container {
+        .container-spacing {
+            padding-inline-end: unset !important;
+        }
+
+        .detail-img {
+            width: 100% !important;
+            height: auto !important;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            > img {
+                width: 100%;
+                margin-inline-start: -46px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1700px) and (max-width: 2000px) {
+    .campign-detail-container {
+        .container-spacing {
+            padding-inline-end: 12rem !important;
+        }
+        .container {
+            max-width: 1500px !important;
+        }
+    }
+}

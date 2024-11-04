@@ -1,0 +1,52 @@
+@import '@constants/typography.scss';
+@import '@constants/colors.scss';
+@import '@constants/media.scss';
+@import '@constants/responsive.scss';
+.similar-products {
+    .swiper.swiper-initialized {
+        background-color: transparent !important;
+        padding-inline: 10px;
+    }
+    .product-card {
+        box-shadow: 0px 3.5px 12.5px 0px rgba(0, 0, 0, 0.06) !important;
+    }
+    h4 {
+        font-family: $font-Inter;
+        font-weight: 700;
+        padding-inline: 10px;
+
+        color: #344054;
+        @include responsiveProperty(
+            (
+                font-size: 30
+            )
+        );
+    }
+}
+.product-card {
+    box-shadow: 0px 0px 20px -17px rgba(0, 0, 0, 0.079);
+}
+
+.navigation {
+    margin-top: unset !important;
+    margin-right: unset !important;
+    a {
+        border: 1px solid #f1f1f1;
+        width: 40px;
+        height: 40px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin-inline: 8px;
+        background: #fff;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 475px) {
+    .similar-products {
+        h4 {
+            font-size: 20px !important;
+        }
+    }
+}

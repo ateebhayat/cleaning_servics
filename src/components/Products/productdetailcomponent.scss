@@ -1,0 +1,232 @@
+@import '@constants/typography.scss';
+@import '@constants/colors.scss';
+@import '@constants/media.scss';
+@import '@constants/responsive.scss';
+.prod-detail-comp {
+    .col-spacing {
+        padding-inline: 5rem;
+    }
+    .content-img-wrapper {
+        img {
+            border-radius: 16px;
+            margin-inline-end: 3rem;
+        }
+        .prod-title {
+            font-family: $font-poppins;
+            font-weight: 600;
+            font-size: 29px;
+            margin-bottom: 0.5rem;
+        }
+    }
+    .desc-wrapper {
+        padding: 0.25rem 0 1rem 0;
+        .desc {
+            font-family: $font-Inter;
+            font-weight: 600;
+            font-size: 17.45px;
+            margin-bottom: 0.5rem;
+        }
+        .desc-content {
+            color: #a4a4a4;
+            font-family: $font-poppins;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 26px;
+        }
+    }
+    .campaign h4 {
+        color: $primary-color;
+        font-size: 14px;
+        font-family: $font-poppins;
+        font-weight: 500;
+        margin-inline-end: 1rem;
+        min-width: 103px;
+    }
+    .campaign hr {
+        width: 90%;
+    }
+    .detail-page-row {
+        padding: 2rem 0 0 0;
+    }
+    padding-inline: 2rem;
+    .carousel {
+        width: 90% !important;
+    }
+    .carousel .thumbs-wrapper {
+        margin: 32px 25px !important;
+    }
+
+    .carousel .thumb {
+        border: unset !important;
+        padding: unset !important;
+        margin-right: 30px !important;
+    }
+    .carousel .thumb.selected,
+    .carousel .thumb:hover {
+        border: unset !important;
+    }
+    .carousel .thumb:focus {
+        outline: none !important;
+    }
+    .carousel .thumbs-wrapper {
+        margin: 32px !important;
+    }
+    .frame {
+        background-image: url('../../assets/images/frame.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        padding: 10px 1rem 10px;
+        .star {
+            margin-right: 1.5rem;
+        }
+        .category-content {
+            @include responsiveProperty(
+                (
+                    font-size: 17.32
+                )
+            );
+            font-family: $font-Inter;
+            font-weight: 600;
+        }
+    }
+    .product-content {
+        padding-inline-start: 1rem;
+        .seller-wrapper {
+            padding: 0.5rem 0rem;
+            p {
+                font-size: 14px;
+
+                font-family: $font-Inter;
+                font-weight: 400;
+                color: #4d6b8c;
+                padding: 0.25rem 0;
+                line-height: 16.94px;
+            }
+            .seller-info {
+                font-size: 17.45px;
+
+                font-family: $font-Inter;
+                font-weight: 600;
+                color: #4f4f4f;
+            }
+        }
+        .price-wrapper {
+            padding: 0.5rem 0rem;
+            .price {
+                @include responsiveProperty(
+                    (
+                        font-size: 32
+                    )
+                );
+
+                font-family: $font-Inter;
+                font-weight: 700;
+                color: #4f4f4f;
+                margin-right: 2rem;
+            }
+            .date-published {
+                padding: 5px 1rem;
+                background: #edf0f8;
+                border-radius: 33.75px;
+                span {
+                    @include responsiveProperty(
+                        (
+                            font-size: 10.9px
+                        )
+                    );
+                    font-family: $font-Inter;
+                    font-weight: 600;
+                    color: #3a4980;
+                }
+            }
+        }
+        .location-wrapper {
+            padding: 0.5rem 0rem;
+            .address-container {
+                margin-left: 1rem;
+            }
+            .address {
+                font-size: 12.46px;
+
+                font-family: $font-Inter;
+                font-weight: 400;
+                color: #b9bbbf;
+            }
+            .location {
+                margin-bottom: 1rem;
+                font-size: 17.45px;
+                font-family: $font-Inter;
+                font-weight: 600;
+                color: #4f4f4f;
+            }
+            .loc-icon {
+                margin-right: 45px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 475px) {
+    .prod-detail-comp {
+        .content-img-wrapper {
+            .prod-title {
+                font-size: 16px !important;
+            }
+            .prod-desc {
+                font-size: 14px !important;
+                text-align: center;
+                margin: 0 0 5px 0;
+            }
+        }
+        .col-spacing {
+            padding: unset !important;
+        }
+        .carousel {
+            width: 100% !important;
+        }
+        padding: unset !important;
+        .frame {
+            padding: 10px 1rem;
+            .category-content {
+                font-size: 12px !important;
+            }
+        }
+        .product-content {
+            padding: unset !important;
+            .product-name {
+                font-size: 18px !important;
+            }
+            .category-content {
+                font-size: 14px !important;
+            }
+        }
+        .product-wrapper {
+            .price {
+                font-size: 24px !important;
+            }
+        }
+    }
+    .detail-page-row {
+        div:nth-child(1) {
+            padding-inline-start: unset !important;
+        }
+    }
+}
+
+@media screen and (min-width: 476px) and (max-width: 900px) {
+    .prod-detail-comp {
+        padding-inline: unset !important;
+        .product-content {
+            padding-inline-start: 0.5rem !important;
+        }
+    }
+    .prod-detail-wrapper {
+        .card-prod-component {
+            padding: 3rem 3rem 0 3rem !important;
+        }
+    }
+}
+
+div#flagproduct.prod-detail-comp .campaign h4 {
+    color: red;
+}

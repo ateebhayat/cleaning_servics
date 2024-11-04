@@ -1,0 +1,36 @@
+@import '@constants/typography.scss';
+@import '@constants/colors.scss';
+@import '@constants/media.scss';
+@import '@constants/responsive.scss';
+.prod-detail-wrapper {
+    .action-btn {
+        button {
+            color: #fff;
+            width: 120px;
+            margin-inline-end: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14.6px;
+            font-weight: 600;
+            font-family: $font-poppins;
+            height: 36.51px;
+            border: 1.22px solid #e9f0f3;
+            img {
+                margin-inline-end: 8px;
+            }
+        }
+        button:nth-child(1) {
+            background: #e04242;
+        }
+        button:nth-child(2) {
+            background: $primary-color;
+        }
+    }
+    .card-prod-component {
+        padding: 3rem 2rem 0 2rem;
+    }
+    .custom-card {
+        padding: unset !important;
+    }
+}

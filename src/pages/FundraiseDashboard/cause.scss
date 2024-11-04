@@ -1,0 +1,178 @@
+@import '@constants/typography.scss';
+@import '@constants/colors.scss';
+@import '@constants/media.scss';
+@import '@constants/responsive.scss';
+
+.adminhome-table.p-datatable .p-datatable-thead > tr > th {
+    background-color: #f5f8f9;
+    color: #22262f !important;
+    font-weight: 500;
+    font-size: 15px;
+}
+.adminhome-table.p-datatable .p-datatable-thead > tr > th:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.adminhome-table.p-datatable .p-datatable-thead > tr > th:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.request-section {
+    h2 {
+        font-family: $font-poppins;
+        font-size: 20px;
+        font-weight: 600;
+        color: #002b5b;
+    }
+    p {
+        font-family: $font-poppins;
+        font-size: 16px;
+        font-weight: 400;
+        color: #4d6b8c;
+    }
+}
+.p-datatable .p-column-header-content {
+    color: #002b5b;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: $font-poppins;
+}
+
+.adminhome-table.p-datatable .p-datatable-tbody > tr:not(:last-child) {
+    border-bottom: 1px solid #e4e9ed;
+}
+
+li.p-unselectable-text.p-tabview-selected.p-highlight {
+    border-bottom: none !important;
+}
+.p-datatable .p-paginator-bottom {
+    border-width: 0 0 0 0;
+    border-radius: 0;
+}
+.userlisting img {
+    top: 10px !important;
+}
+.user-tabs-btn {
+    .search-input.w-full {
+        border-radius: 8px !important;
+        border: unset !important;
+        height: 38px !important;
+        background-color: #f5f8f9 !important;
+    }
+    h2 {
+        color: #002b5b;
+        font-family: $font-poppins;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    p {
+        color: #4d6b8c;
+        font-family: $font-poppins;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+.user-tabs-btn button.btn.btn-primary {
+    min-width: 110px;
+    margin-right: 10px;
+    background-color: #f5f8f9;
+    color: #8c8c8c;
+    border-radius: 3px !important;
+    border-bottom: 0px !important;
+    border: none !important;
+    border-radius: 10px !important;
+    font-family: $font-poppins;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.user-tabs-btn button.activetbtn.btn.btn-primary {
+    background-color: #1d71ff;
+    color: #fff;
+    border-bottom: 0px !important;
+}
+
+li.p-unselectable-text a {
+    background-color: #dcdcdc;
+    color: #828282;
+    border-radius: 3px !important;
+    border-bottom: 0px !important;
+}
+
+.p-tabview .p-tabview-nav .p-tabview-ink-bar {
+    height: 0px !important;
+}
+
+ul.p-tabview-nav li a {
+    justify-content: center;
+}
+
+ul.p-tabview-nav li {
+    margin: 0 10px 4px;
+    border-radius: 12px;
+    min-width: 100px;
+    text-align: center;
+}
+
+.p-tabview ul.p-tabview-nav {
+    border-bottom: none;
+}
+
+ul.p-tabview-nav li a {
+    border-radius: 10px !important;
+}
+
+.usermanage-main {
+    position: relative;
+    padding: 1.5rem 0 1.5rem 0;
+}
+
+@media (max-width: 870px) {
+    .flex.justify-content-end.gap-3.user-manag-chat {
+        width: 100%;
+    }
+
+    .p-tabview ul.p-tabview-nav {
+        margin-top: 55px;
+    }
+}
+
+.user-tabs-btn .user-tabs-btn {
+    position: relative;
+}
+
+.actions-icons img {
+    max-width: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+span.unreadcompaigns {
+    color: #fff;
+    position: absolute;
+    top: -9px;
+    right: -5px;
+    background-color: #f72424;
+    padding: 2px 4px;
+    border-radius: 100px;
+    font-size: 12px;
+}
+
+.home-table-section.profile img {
+    max-width: 70px;
+    border-radius: 100px;
+    min-height: 60px;
+}
+.profile .name {
+    font-size: 20px;
+    font-weight: 600;
+}
+.profile p {
+    margin-right: 20px;
+}
+.profile {
+    display: flex;
+    margin-bottom: 30px;
+}

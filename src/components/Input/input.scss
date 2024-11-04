@@ -1,0 +1,102 @@
+@import '@constants/colors.scss';
+@import '@constants/typography.scss';
+@import '@constants/media.scss';
+
+.form-inline {
+    label {
+        display: inline-block !important;
+    }
+}
+.formgroup {
+    .form-control:focus {
+        box-shadow: unset !important;
+    }
+
+    position: relative;
+    margin: 15px 0px 14px 0px;
+    width: 100%;
+    .forget-pass {
+        color: #2da5f3;
+        font-family: $font-Public !important;
+        font-weight: 500;
+        font-size: 18.78px;
+        margin-bottom: 0.8rem;
+        cursor: pointer;
+    }
+    label {
+        display: block;
+        margin-bottom: 2px;
+        font-size: 18.78px;
+        font-family: $font-Public !important;
+        font-weight: 400;
+        text-transform: capitalize;
+        //handle responsive
+        @include respond-to($small-screen) {
+            font-size: 14px;
+        }
+    }
+    // input type text and password default styles. Please feel free to customize as required
+    input[type='text'],
+    input[type='password'],
+    textarea,
+    .custom_select__control {
+        font-size: 16px;
+        font-family: $font-primary;
+        border-radius: 2.68px;
+        padding: 0.8rem 0.5rem;
+        border: 1.34px solid #e4e7e9;
+        // background-color: #fff;
+        color: #000;
+        &::placeholder {
+            text-transform: capitalize;
+            font-size: 14px;
+        }
+        &:focus {
+            outline: 1.5px solid $primary-color;
+        }
+
+        //handle responsive
+        @include respond-to($small-screen) {
+            width: 270px;
+            padding: 4px 5px;
+            font-size: 14px;
+        }
+        @include respond-to($x-small-screen) {
+            width: 100%;
+            padding: 4px 5px;
+            font-size: 14px;
+        }
+    }
+
+    //use react select class prefix to select required elements within selector element
+    .custom_select__control {
+        padding: 0px;
+        font-size: 16px;
+        color: $info-color !important;
+        &:hover {
+            border-color: $info-color;
+        }
+    }
+    // form control radio default styles
+    .check-control {
+        display: inline-block !important;
+        margin-right: 10px;
+        input {
+            margin-right: 5px;
+        }
+    }
+    // validation error message style
+    .validation-error {
+        font-family: $font-primary;
+        color: $danger-color;
+        font-size: 12px;
+        margin-top: 10px;
+        position: absolute;
+        bottom: -20px;
+        left: 0px;
+        //handle responsive
+        @include respond-to($small-screen) {
+            font-size: 12px;
+        }
+    }
+}

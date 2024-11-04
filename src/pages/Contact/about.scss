@@ -1,0 +1,75 @@
+@import '@constants/typography.scss';
+@import '@constants/colors.scss';
+@import '@constants/media.scss';
+@import '@constants/responsive.scss';
+.effect-box {
+    background-image: url('../../assets/images/effect.png');
+    background-repeat: no-repeat;
+    background-position: 0 107%;
+}
+
+.about-container {
+    padding: 4rem 0;
+
+    background-repeat: no-repeat;
+    .heading-about {
+        @include responsiveProperty(
+            (
+                font-size: 40.73
+            )
+        );
+        font-weight: 700;
+        font-family: $font-secondary;
+        line-height: 52.22px;
+    }
+    img {
+        width: 100%;
+        margin: 0rem 0 4rem 0;
+    }
+    .content-about {
+        font-family: $font-primary;
+        color: #afafaf;
+        font-size: 16.71px;
+        font-weight: 500;
+        padding: 2rem 0;
+    }
+    .mission {
+        background: #f8fbff;
+        padding: 2.5rem;
+        border-radius: 10.44px;
+        width: 100%;
+        height: 350px;
+        margin: 2rem 0;
+        h3 {
+            font-family: $font-nunito !important;
+            color: $secondary-color;
+            margin: 0 0 0 2rem;
+            font-family: $font-primary;
+            font-weight: 700 !important;
+
+            @include responsiveProperty(
+                (
+                    font-size: 28
+                )
+            );
+        }
+        p {
+            font-family: $font-primary;
+            color: #555555;
+            font-weight: 400;
+            font-size: 14.62px;
+        }
+    }
+}
+.contact-form .col-md-12 {
+    margin: 6px 0;
+}
+.contact-form {
+    padding: 30px 60px;
+    box-shadow: 0 0 20px -15px;
+    border-radius: 10px;
+}
+.contact-form input {
+    padding: 10px;
+    width: 100%;
+}

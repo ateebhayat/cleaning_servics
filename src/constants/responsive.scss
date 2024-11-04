@@ -1,0 +1,196 @@
+@use 'sass:math';
+.customContainer {
+    margin: auto;
+}
+.w10 {
+    width: 10% !important;
+}
+.w15 {
+    width: 15% !important;
+}
+.w20 {
+    width: 20% !important;
+}
+.w30 {
+    width: 30% !important;
+}
+.w80 {
+    width: 80% !important;
+}
+.w85 {
+    width: 85% !important;
+}
+.w90 {
+    width: 90% !important;
+}
+.h100 {
+    height: 100% !important;
+}
+@mixin elipsis($val) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $val;
+    -webkit-box-orient: vertical;
+}
+@function calculateRatio($base-size, $ratio) {
+    $result: $base-size * $ratio;
+    @if ($result < 0) {
+        @return $base-size * $ratio;
+    } @else if ($result > 10) {
+        @return $base-size * $ratio;
+    } @else {
+        @return 10;
+    }
+}
+@function calculateRatioWithoutCheck($base-size, $ratio) {
+    $result: $base-size * $ratio;
+    @return $result;
+}
+// Example mixin using the function
+@mixin responsiveProperty($properties) {
+    @include spreadProperty($properties, 1);
+    @media screen and (min-width: 768px) {
+        @include spreadProperty($properties, math.div(768, 1400));
+    }
+    @media screen and (min-width: 992px) {
+        @include spreadProperty($properties, math.div(992, 1920));
+    }
+    @media screen and (min-width: 1200px) {
+        @include spreadProperty($properties, math.div(1350, 1920));
+    }
+    @media screen and (min-width: 1400px) {
+        @include spreadProperty($properties, math.div(1400, 1920));
+    }
+    @media screen and (min-width: 1600px) {
+        @include spreadProperty($properties, math.div(1680, 1920));
+    }
+    @media screen and (min-width: 1800px) {
+        @include spreadProperty($properties, math.div(1800, 1920));
+    }
+    @media screen and (min-width: 1920px) {
+        @include spreadProperty($properties, math.div(1920, 1920));
+    }
+}
+@mixin responsivePropertyWithoutCheck($properties) {
+    @include spreadPropertyWithOutCheck($properties, 1);
+    @media screen and (min-width: 768px) {
+        @include spreadPropertyWithOutCheck($properties, math.div(768, 1400));
+    }
+    @media screen and (min-width: 992px) {
+        @include spreadPropertyWithOutCheck($properties, math.div(992, 1920));
+    }
+    @media screen and (min-width: 1200px) {
+        @include spreadPropertyWithOutCheck($properties, math.div(1200, 1920));
+    }
+    @media screen and (min-width: 1400px) {
+        @include spreadPropertyWithOutCheck($properties, math.div(1400, 1920));
+    }
+    @media screen and (min-width: 1600px) {
+        @include spreadPropertyWithOutCheck($properties, math.div(1600, 1920));
+    }
+    @media screen and (min-width: 1800px) {
+        @include spreadPropertyWithOutCheck($properties, math.div(1800, 1920));
+    }
+    @media screen and (min-width: 1920px) {
+        @include spreadPropertyWithOutCheck($properties, math.div(1920, 1920));
+    }
+}
+@mixin propertValCalculation($key, $percentVal, $value) {
+    $val: calculateRatio($value, 1) + px;
+    #{$key}: calc($percentVal - $val);
+    @media screen and (min-width: 768px) {
+        $val: calculateRatio($value, math.div(768, 1400)) + px;
+        #{$key}: calc($percentVal - $val);
+    }
+    @media screen and (min-width: 992px) {
+        $val: calculateRatio($value, math.div(992, 1920)) + px;
+        #{$key}: calc($percentVal - $val);
+    }
+    @media screen and (min-width: 1200px) {
+        $val: calculateRatio($value, math.div(1200, 1920)) + px;
+        #{$key}: calc($percentVal - $val);
+    }
+    @media screen and (min-width: 1400px) {
+        $val: calculateRatio($value, math.div(1400, 1920)) + px;
+        #{$key}: calc($percentVal - $val);
+    }
+    @media screen and (min-width: 1600px) {
+        $val: calculateRatio($value, math.div(1600, 1920)) + px;
+        #{$key}: calc($percentVal - $val);
+    }
+    @media screen and (min-width: 1800px) {
+        $val: calculateRatio($value, math.div(1800, 1920)) + px;
+        #{$key}: calc($percentVal - $val);
+    }
+    @media screen and (min-width: 1920px) {
+        $val: calculateRatio($value, math.div(1920, 1920)) + px;
+        #{$key}: calc($percentVal - $val);
+    }
+}
+@mixin spreadProperty($myArray, $ratioValue) {
+    @each $name, $value in $myArray {
+        $key: $name;
+        $value: calculateRatio($value, $ratioValue) + px;
+        // Use the key-value pairs in your styles
+        #{$key}: $value !important;
+    }
+}
+@mixin spreadPropertyWithOutCheck($myArray, $ratioValue) {
+    @each $name, $value in $myArray {
+        $key: $name;
+        $value: calculateRatioWithoutCheck($value, $ratioValue) + px;
+        // Use the key-value pairs in your styles
+        #{$key}: $value !important;
+    }
+}
+@function calculatePixels($screenSize, $value) {
+    $ratio: math.div($screenSize, 1920);
+    $result: $value * $ratio;
+    @return $result + px;
+}
+@media screen and (max-width: 576px) {
+    .customContainer {
+        max-width: 100%;
+    }
+}
+@media screen and (min-width: 576px) {
+    .customContainer {
+        max-width: 540px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .customContainer {
+        max-width: 720px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .customContainer {
+        max-width: 960px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .customContainer {
+        max-width: 1140px;
+    }
+}
+@media screen and (min-width: 1400px) {
+    .customContainer {
+        max-width: 1320px;
+    }
+}
+@media screen and (min-width: 1600px) {
+    .customContainer {
+        max-width: 1500px;
+    }
+}
+@media screen and (min-width: 1800px) {
+    .customContainer {
+        max-width: 1688px;
+    }
+}
+@media screen and (min-width: 2000px) {
+    .customContainer {
+        max-width: 1875px;
+    }
+}

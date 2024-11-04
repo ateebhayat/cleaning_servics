@@ -1,0 +1,180 @@
+@import '@constants/typography.scss';
+@import '@constants/colors.scss';
+@import '@constants/media.scss';
+@import '@constants/responsive.scss';
+.filters {
+    .filter-margin {
+        margin-bottom: 1.9rem !important;
+    }
+    h3 {
+        font-family: $font-Inter;
+        margin: unset !important;
+        font-size: 25px;
+        font-weight: 500;
+        color: #140342;
+    }
+    .clear-btn {
+        border: unset;
+        background: unset;
+        border: 1.25px solid #e4e4e4;
+        border-radius: 37.5px;
+        color: #726c6c;
+        font-family: $font-Inter;
+        font-size: 17.5px;
+        font-weight: 400;
+        padding: 5px 15px;
+    }
+    .filter-checkbox {
+        .form-check-input {
+            width: 18.75px !important;
+            height: 18.75px !important;
+            border-radius: 0px !important;
+            margin-right: 0.5rem;
+            border: 2.5px solid #6a7a99;
+            &:checked {
+                background-color: #1a094f;
+                border: unset;
+            }
+            &:focus {
+                box-shadow: unset !important;
+            }
+        }
+    }
+    .card > hr {
+        color: #dddddd;
+    }
+    .card-wrapper {
+        background: unset;
+        border: 1.25px solid #f3f3f3;
+        padding: 10px 10px;
+
+        .accordion {
+            border: unset !important;
+            .accordion-body {
+                padding: 0.5rem !important;
+            }
+        }
+
+        .accordion-item {
+            border: unset !important;
+        }
+        button:focus,
+        button:focus-visible {
+            outline: unset !important;
+        }
+        .accordion-button {
+            font-family: $font-Inter;
+            font-size: 25px;
+            font-weight: 500 !important;
+            padding: 0.5rem !important;
+            &::after {
+                background-image: url('../../assets/images/dropdown.png') !important;
+                rotate: 180deg;
+            }
+        }
+        .accordion-button:focus {
+            z-index: 0 !important;
+            border-color: unset !important;
+            outline: 0 !important;
+            box-shadow: unset !important;
+        }
+    }
+
+    .accordion-button:not(.collapsed) {
+        background-color: unset;
+        box-shadow: unset;
+        border: unset;
+    }
+
+    .show-btn {
+        color: $primary-color;
+        border: unset;
+        background: unset;
+        border-radius: unset;
+        text-decoration: underline;
+        font-size: 17.5px;
+        font-family: $font-Inter;
+
+        padding: 0px;
+    }
+    .category-name {
+        color: #1a064f;
+        font-size: 17.5px;
+        font-weight: 400;
+        font-family: $font-Inter;
+    }
+    .count {
+        color: #4f547b;
+        font-size: 17.5px;
+        font-weight: 400;
+        font-family: $font-Inter;
+    }
+}
+.price-inputs {
+    input {
+        width: 95px;
+        height: 50px;
+        margin-inline-end: 20px;
+        background: transparent;
+        color: #1a064f;
+        padding-inline-start: 10px;
+        border-radius: 12.5px;
+        border: 1.25px solid #e4e4e4;
+        &:focus {
+            outline: unset;
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 475px) {
+    .filters {
+        .filter-margin {
+            margin-bottom: 0.7rem !important;
+        }
+        .count {
+            font-size: 12px;
+        }
+        .filter-checkbox {
+            .form-check-input {
+                width: 14px !important;
+                height: 14px !important;
+            }
+        }
+        .show-btn {
+            font-size: 12px;
+            font-family: 'Inter', Arial, sans-serif;
+        }
+        .category-name {
+            font-size: 12px;
+        }
+        h3 {
+            font-size: 18px !important;
+            margin-bottom: unset !important;
+        }
+        .clear-btn {
+            font-size: 14px;
+            padding: 5px 10px;
+        }
+        .card-wrapper {
+            .accordion {
+                .accordion-body {
+                    padding: 5px !important;
+                }
+            }
+            .accordion-button {
+                font-size: 18px !important;
+                padding: 5px !important;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1400px) {
+    .filters {
+        & > .card-wrapper .accordion-button {
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 20px;
+            font-weight: 500 !important;
+            padding: 0.5rem !important;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@import '@constants/colors.scss';
+@import '@constants/typography.scss';
+.stat-card {
+    .stat-icon {
+        width: 25px;
+    }
+    .stat-summary {
+        .stat-description {
+            font-size: 14px !important;
+            font-family: $font-poppins !important;
+            color: #002b5b !important;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+        img {
+            max-width: 20px;
+        }
+    }
+    .stat-value {
+        font-size: 27px;
+        font-family: $font-poppins;
+        color: $text-color;
+        font-weight: 600;
+        margin-top: 10px;
+    }
+}

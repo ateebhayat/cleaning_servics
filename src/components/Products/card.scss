@@ -1,0 +1,155 @@
+@import '@constants/typography.scss';
+@import '@constants/colors.scss';
+@import '@constants/media.scss';
+@import '@constants/responsive.scss';
+.product-card {
+    .product-author {
+        > img {
+            margin-inline-end: 1.25rem;
+            border-radius: 50%;
+        }
+        > span {
+            font-family: $font-Inter;
+            font-size: 14px;
+            font-weight: 500;
+            color: #3f3f3f;
+        }
+    }
+    .card-body {
+        padding: 1rem !important;
+    }
+    box-shadow: 0px 5px 18px 0px rgba(0, 0, 0, 0.06);
+
+    border-radius: 15.32px;
+    border: unset;
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+        cursor: pointer;
+    }
+
+    button {
+        background: $primary-color;
+        font-weight: 500;
+        @include responsiveProperty(
+            (
+                font-size: 20.52
+            )
+        );
+        padding: 0.3rem 0.5rem !important;
+        border: unset;
+        width: 95%;
+        font-family: $font-primary;
+        color: #fff;
+    }
+
+    .progress-bar {
+        border-radius: 90px !important;
+        background-color: $primary-color !important;
+    }
+
+    .progress {
+        border-radius: 90px !important;
+        height: 8.71px;
+        background-color: #e0f6ec;
+    }
+    .desc {
+        margin-bottom: 1rem;
+        font-family: $font-Inter;
+        color: #98a2b3 !important;
+        font-weight: 400;
+        font-size: 18.2px;
+    }
+    .percentage {
+        color: $primary-color;
+        font-weight: 600;
+    }
+    .goal {
+        color: #b9bbbf;
+        font-size: 16.49px;
+        font-family: $font-Inter;
+        font-weight: 400;
+        span {
+            font-weight: 600;
+        }
+    }
+    .ongoing {
+        margin-bottom: 2.5rem;
+        span {
+            color: #b9bbbf;
+            font-weight: 400;
+            margin-bottom: 1rem !important;
+        }
+    }
+    .target p {
+        font-family: $font-primary;
+        font-weight: 700;
+        font-size: 15.87px;
+        span {
+            font-family: $font-primary;
+            font-weight: 400;
+            font-size: 15.87px;
+        }
+    }
+
+    h3 {
+        color: #344054;
+        font-size: 23.39px;
+        font-family: $font-Inter;
+        font-weight: 700;
+        margin-bottom: 0.8rem;
+    }
+    .catogory-box {
+        text-align: center;
+        padding: 3px 10px;
+        width: 100%;
+        color: #3a4980;
+        font-weight: 600;
+        font-size: 16.49px;
+        font-family: $font-Inter;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        border-radius: 31.81px;
+        background: #edf0f8;
+    }
+    .card-title {
+        color: #667085;
+    }
+    .card-title.h5 {
+        @include responsiveProperty(
+            (
+                font-size: 20.79
+            )
+        );
+        font-family: $font-Inter;
+        margin-bottom: 1rem !important;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 475px) {
+    .product-card {
+        img {
+            height: auto !important;
+        }
+        button {
+            font-size: 16px !important;
+        }
+        .card-title.h5 {
+            font-size: 16px !important;
+            margin-bottom: 0.5rem !important;
+        }
+
+        h3 {
+            font-size: 16px !important;
+            margin-bottom: 0.5rem !important;
+        }
+        .desc {
+            margin-bottom: 0.5rem !important;
+            font-size: 16px;
+        }
+        .goal {
+            font-size: 14px;
+        }
+        .catogory-box {
+            font-size: 14.49px !important;
+        }
+    }
+}

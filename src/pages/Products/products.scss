@@ -1,0 +1,74 @@
+@import '@constants/typography.scss';
+@import '@constants/colors.scss';
+@import '@constants/media.scss';
+@import '@constants/responsive.scss';
+.product-effect-box {
+    background-image: url('../../assets/images/effect.png');
+    background-repeat: no-repeat;
+    background-position: 0 107%;
+}
+.cont-spacing {
+    padding: 5rem 0 5rem 0;
+}
+.products {
+    h3 {
+        margin-top: 6px;
+        font-family: $font-Inter;
+        font-size: 18px;
+        font-weight: 500;
+        color: #140342;
+    }
+    .clear-btn {
+        border: unset;
+        background: unset;
+        border: 1.25px solid #e4e4e4;
+        border-radius: 37.5px;
+
+        font-family: $font-Inter;
+        font-size: 17.5px;
+        font-weight: 400;
+        color: #726c6c;
+    }
+    .recent-btn {
+        margin-top: 6px;
+        border: unset;
+        background: unset;
+        border: 1.25px solid #e4e4e4;
+        border-radius: 37.5px;
+        font-family: $font-Inter;
+        font-size: 17.5px;
+        font-weight: 400;
+        button {
+            color: #726c6c;
+        }
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .space-inline {
+        padding-inline: 1.5rem !important;
+    }
+    .products {
+        > div:nth-child(1) {
+            padding: 0.5rem 0 !important;
+        }
+        .recent-btn {
+            padding: unset !important;
+            button {
+                font-size: 14px !important;
+            }
+        }
+
+        h3 {
+            font-size: 14px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .products {
+        > div:nth-child(1) {
+            padding: 1rem 0 !important;
+        }
+    }
+}

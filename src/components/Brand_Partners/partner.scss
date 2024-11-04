@@ -1,0 +1,29 @@
+.partner {
+    .swiper-wrapper {
+        padding: 0 40px;
+    }
+}
+
+.swiper-button {
+    position: absolute;
+    top: 40px;
+    z-index: 999;
+    border: 1.08px solid #d0d5dd;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-button-prev-custom {
+    @extend .swiper-button;
+    left: 0px;
+}
+
+.swiper-button-next-custom {
+    @extend .swiper-button;
+    right: 0px;
+    padding: 10px 15px 15px;
+}

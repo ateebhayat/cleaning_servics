@@ -1,0 +1,199 @@
+@import '@constants/colors.scss';
+@import '@constants/typography.scss';
+.fade.modal.show {
+    top: 60px !important;
+}
+// .fade.modal-backdrop.show {
+//     top: 110px;
+// }
+.auth-modal-wrapper {
+    .fade.modal.show {
+        top: 80px !important;
+    }
+    .modal-content {
+        width: 560px !important;
+    }
+    .fade.modal-backdrop.show {
+        top: 110px;
+    }
+    .modal-backdrop {
+        top: 110px !important;
+    }
+    .modal-content {
+        border-radius: 5.37px !important;
+    }
+
+    .modal {
+        width: 560px !important;
+    }
+}
+.auth-modal-body {
+    .modal-body {
+        padding: 1rem 0rem;
+    }
+
+    .form-wrapper {
+        padding: 1rem 3rem 0 3rem;
+    }
+    .password-container {
+        position: relative;
+        .eye {
+            position: absolute;
+            top: 53%;
+            left: 90%;
+
+            cursor: pointer;
+        }
+        .formgroup input {
+            &::placeholder {
+                font-family: $font-Public;
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+    }
+    .check-box {
+        .form-check-input {
+            width: 26.79px !important;
+            height: 26.79px !important;
+            border-radius: 2.68px !important;
+            margin-right: 0.5rem;
+            border: 1px solid #475156;
+            &:checked {
+                background-color: $primary-color;
+                border: unset;
+            }
+            &:focus {
+                box-shadow: unset !important;
+            }
+        }
+        .label-privacy {
+            display: inline !important;
+            font-family: $font-Public;
+            font-size: 18.75px;
+            font-weight: 400;
+            color: #475156;
+            span {
+                display: inline !important;
+                font-family: $font-Public;
+                font-size: 18.75px;
+                font-weight: 500;
+                color: #2da5f3;
+            }
+        }
+    }
+}
+
+.btn-wrapper {
+    .active {
+        border-bottom: 3px solid #2ec17d !important;
+        border-radius: unset;
+        color: #191c1f !important;
+        font-size: 26.83px !important;
+    }
+    .auth-button {
+        width: 50% !important;
+        text-decoration: none;
+        font-family: $font-Public;
+        font-size: 26.83px;
+        color: #77878f;
+        background: unset;
+        font-weight: 600;
+        border: unset;
+        border-bottom: 1.5px solid gray;
+        border-radius: unset;
+    }
+}
+#loginTab .auth-button {
+    width: 100% !important;
+}
+.auth-btn {
+    margin-top: 1.5rem;
+    button {
+        border: unset !important;
+        border-radius: unset !important;
+        background: $primary-color;
+        font-family: $font-Public;
+
+        width: 100%;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        border-radius: 2.68px !important;
+        padding: 0.7rem 0rem;
+    }
+    span {
+        margin-left: 0.3rem;
+    }
+}
+
+.forgot-pass {
+    .row {
+        padding: unset !important;
+    }
+    padding: 1.5rem 2.5rem;
+    text-align: center;
+    .contact-support {
+        text-align: start;
+
+        margin-bottom: 0.5rem;
+        font-family: $font-Public;
+        font-size: 18.77px;
+        color: #5f6c72;
+        font-weight: 400;
+
+        a {
+            margin-bottom: 0.5rem;
+            font-family: $font-Public;
+            font-size: 18.77px;
+            color: $primary-color;
+            font-weight: 500;
+            cursor: pointer;
+        }
+    }
+    .auth-links {
+        text-align: start;
+        margin: 2rem 0rem;
+        p {
+            margin-bottom: 0.5rem;
+            font-family: $font-Public;
+            font-size: 18.77px;
+            color: #5f6c72;
+            font-weight: 400;
+        }
+        a {
+            margin-bottom: 0.5rem;
+            font-family: $font-Public;
+            font-size: 18.77px;
+            color: #2da5f3;
+            font-weight: 500;
+            cursor: pointer;
+        }
+    }
+    .forgot-pass-title {
+        margin-bottom: 15px;
+        font-family: $font-Public;
+        font-size: 26.81px;
+        color: #191c1f;
+        font-weight: 600;
+    }
+    .forgot-pass-text {
+        padding: 1rem 0;
+        font-family: $font-Public;
+        font-size: 18.77px;
+        color: #5f6c72;
+        line-height: 26.81px !important;
+        font-weight: 400;
+    }
+}
+.close-btn.modal-header {
+    position: absolute;
+    right: 0;
+    border-bottom: 0px;
+    z-index: 99;
+}
+button:disabled {
+    opacity: 0.85 !important;
+    pointer-events: none;
+}

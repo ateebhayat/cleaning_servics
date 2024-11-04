@@ -1,0 +1,70 @@
+@import '@constants/colors.scss';
+
+// please feel free to override as per your need
+$x-small-screen: 320;
+$small-screen: 425;
+$medium-screen: 768px;
+$large-screen: 1024;
+$x-large-screen: 1440;
+// for all screens greater than 1200
+$xx-large-screen: 1680;
+$xxx-large-screen: 1920;
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == 1201px {
+        @media (min-width: $breakpoint) {
+            @content;
+        }
+    } @else {
+        @media (max-width: $breakpoint) {
+            @content;
+        }
+    }
+}
+
+//  Hover effect
+
+@mixin button-hover-effect-secondary {
+    &:hover {
+        span {
+            svg {
+                path {
+                    stroke: $secondary-color;
+                }
+            }
+            color: $secondary-color !important;
+        }
+        color: $secondary-color;
+        border: 2px solid $secondary-color;
+        background: #fff;
+    }
+}
+@mixin button-hover-effect-see-all {
+    &:hover {
+        span {
+            svg {
+                path {
+                    stroke: $secondary-color;
+                }
+            }
+            color: $secondary-color !important;
+        }
+        color: $secondary-color;
+        background: #fff;
+    }
+}
+@mixin button-hover-effect-primary {
+    &:hover {
+        span {
+            svg {
+                path {
+                    stroke: $secondary-color;
+                }
+            }
+            color: $primary-color !important;
+        }
+        color: $primary-color;
+        border: 2px solid $primary-color;
+        background: #fff;
+    }
+}
