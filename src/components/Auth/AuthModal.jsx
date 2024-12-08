@@ -62,7 +62,7 @@ const AuthModal = ({ showLoginModal, handleLoginModal, setShowLoginModal, authus
 
       setSubmitting(false);
       setShowLoginModal(false);
-navigate('/seller')
+      navigate('/services')
     } catch (error) {
       setSubmitting(false);
       setShowLoginModal(false);
