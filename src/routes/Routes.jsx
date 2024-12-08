@@ -20,12 +20,12 @@ const MainRoutes = () => {
       </Route>
 
       {/* Protected Routes for Seller */}
-      <Route element={<ProtectedRoute allowedRoles={['seller']} />}>
+      <Route element={<ProtectedRoute  />}>
         <Route path="/" element={<DashboardLayout />}>
-          <Route path="/seller" exact element={<SellerDashboard />} />
-          <Route path="/seller/shop_listing" exact element={<ShopsListing />} />
-          <Route path="/seller/profile" exact element={<Profile />} />
-          <Route path="/seller/adpost" exact element={<AdPosting />} />
+          <Route path="/services" exact element={<SellerDashboard />} />
+          <Route path="/services/shop_listing" exact element={<ShopsListing />} />
+          <Route path="/services/profile" exact element={<Profile />} />
+          <Route path="/services/adpost" exact element={<AdPosting />} />
         </Route>
       </Route>
 
