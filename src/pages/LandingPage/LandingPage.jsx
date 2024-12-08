@@ -1,43 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Hero from '@components/Hero/Hero';
-import { Col, Container, Row } from 'react-bootstrap';
-import Popular from '@components/Popular/Popular';
 import './landingpage.scss';
-import welcome from '@images/welcome.png';
-import Bar from '@components/Bar/Bar';
-import { OurMission, OurVision, Discover } from '@components/Icons/icons';
-import Card from '@components/Products/ProductCard';
-import { RightArrow } from '@components/Icons/icons';
-import { useNavigate } from 'react-router-dom';
-import { ProductsData } from '../Data/data';
 import { scrollFunctions } from '../../utils/common';
 
 const LandingPage = () => {
   useEffect(() => {
     scrollFunctions();
   }, [location.pathname]);
-  const [productSlice, setProductsToShow] = useState(8);
-
-  useEffect(() => {
-    const handleResize = () => {
-      // Adjust the number of products to show based on the window width
-      if (window.innerWidth < 500) {
-        setProductsToShow(2);
-      } else {
-        setProductsToShow(8);
-      }
-    };
-
-    handleResize();
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  const navigate = useNavigate();
 
   return (
     <div className="page-bg">

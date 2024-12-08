@@ -4,7 +4,6 @@ import './sidebar.scss';
 import { useNavigate } from 'react-router-dom';
 import logoImg from '@public/fk-logo.png';
 
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import { useSelector, useDispatch } from 'react-redux';
@@ -14,8 +13,7 @@ import { collapseSidebar } from '@redux/theme/theme_slice.js';
 // import all static icons
 
 import logout from '@images/logout.png';
-import { logoutUser } from '../../../redux/auth/auth_slice';
-import { sideBarAdminItems, sideBarFundRaiserItems, sideBarBuyItems } from './SidebarMenu';
+import { sideBarBuyItems } from './SidebarMenu';
 import { queryClient } from '../../../utils/react-query-client';
 
 const Sidebar = () => {
@@ -46,11 +44,7 @@ const Sidebar = () => {
 
   useEffect(() => {
     if (userProfile) {
-      userProfile?.userType === 'admin'
-        ? setSideBarItems(sideBarAdminItems)
-        : userProfile?.userType === 'fundraiser'
-        ? setSideBarItems(sideBarFundRaiserItems)
-        : setSideBarItems(sideBarBuyItems);
+      setSideBarItems(sideBarBuyItems);
     }
   }, []);
 
