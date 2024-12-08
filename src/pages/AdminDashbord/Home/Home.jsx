@@ -9,9 +9,9 @@ import '../admin.scss';
 import cross from '@images/multiply.png';
 import { DataTable } from 'primereact/datatable';
 import { Products, statCards } from './Data';
-import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
 import ConfirmationBox from '../../../components/ConfirmationBox/ConfirmationBox';
+import toast from 'react-hot-toast';
 
 const Home = () => {
     // const [searchText, setSearchText] = useState('');

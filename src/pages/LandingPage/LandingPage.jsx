@@ -13,42 +13,42 @@ import { ProductsData } from '../Data/data';
 import { scrollFunctions } from '../../utils/common';
 
 const LandingPage = () => {
-    useEffect(() => {
-        scrollFunctions();
-    }, [location.pathname]);
-    const [productSlice, setProductsToShow] = useState(8);
+  useEffect(() => {
+    scrollFunctions();
+  }, [location.pathname]);
+  const [productSlice, setProductsToShow] = useState(8);
 
-    useEffect(() => {
-        const handleResize = () => {
-            // Adjust the number of products to show based on the window width
-            if (window.innerWidth < 500) {
-                setProductsToShow(2);
-            } else {
-                setProductsToShow(8);
-            }
-        };
+  useEffect(() => {
+    const handleResize = () => {
+      // Adjust the number of products to show based on the window width
+      if (window.innerWidth < 500) {
+        setProductsToShow(2);
+      } else {
+        setProductsToShow(8);
+      }
+    };
 
-        handleResize();
+    handleResize();
 
-        window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize);
 
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    return (
-        <div className="page-bg">
-            <Hero />
-            {/*  */}
-            <Container>
-                <Popular />
-            </Container>
+  return (
+    <div className="page-bg">
+      <Hero />
+      {/*  */}
+      {/* <Container>
+        <Popular />
+      </Container> */}
 
-            {/* Welcome to Re Raise section */}
-            <div className="bg-white">
+      {/* Welcome to Re Raise section */}
+      {/* <div className="bg-white">
                 <div className="welcome-section ">
                     <Container className="content-container">
                         <Row>
@@ -100,9 +100,9 @@ const LandingPage = () => {
                         </Row>
                     </Container>
                 </div>
-            </div>
-            {/* Top Products Section */}
-            <div className="recent-products">
+            </div> */}
+      {/* Top Products Section */}
+      {/* <div className="recent-products">
                 <Container>
                     <Bar content={'Products'} />
                     <h4 className="recently">Recently Uploaded products in various Campaigns</h4>
@@ -122,9 +122,9 @@ const LandingPage = () => {
                         </button>
                     </div>
                 </Container>
-            </div>
-        </div>
-    );
+            </div> */}
+    </div>
+  );
 };
 
 export default LandingPage;

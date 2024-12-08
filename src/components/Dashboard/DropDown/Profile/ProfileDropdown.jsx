@@ -13,19 +13,19 @@ const ProfileDropdown = () => {
         setShow(!show);
     };
 
-    const userProfileString = localStorage.getItem('userProfile');
+    const userProfileString = localStorage.getItem('userInfo');
     const userProfile = userProfileString ? JSON.parse(userProfileString) : null;
 
     return (
         <Dropdown className="profile-dropdown" onToggle={toggleDropdown}>
             <Dropdown.Toggle id="profile-dropdown-toggle" className="d-flex">
                 <p>
-                    <img src={userImg} alt="user-img" onClick={() => navigate('/profile')} />
+                    <img src={userImg} alt="user-img" onClick={() => navigate(userProfile.userType === 'seller' ? '/seller/profile' : '/profile')} />
                 </p>
                 <div className="text-start">
                     <span>{userProfile?.email?.split('@')[0]}</span>
                     <span className="text-capitalize d-block text-start" style={{ fontSize: '12px' }}>
-                        {userProfile?.role}
+                        {userProfile?.userType}
                     </span>
                 </div>
             </Dropdown.Toggle>

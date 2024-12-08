@@ -4,7 +4,6 @@ import { Column } from 'primereact/column';
 import { Row, Col, Button } from 'react-bootstrap';
 import search from '@images/search.svg';
 import Form from 'react-bootstrap/Form';
-import { toast } from 'react-toastify';
 import '../admin.scss';
 import trash from '@icons/trash.svg';
 import view from '@icons/eye.png';
@@ -14,6 +13,7 @@ import { Products } from '../../FundraiseDashboard/data';
 import Card from '../../../components/Card/Card';
 import { useNavigate } from 'react-router-dom';
 import ConfirmationBox from '../../../components/ConfirmationBox/ConfirmationBox';
+import toast from 'react-hot-toast';
 
 const ProductManagement = () => {
     const [searchText, setSearchText] = useState('');

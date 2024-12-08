@@ -19,7 +19,7 @@ import cross from '@images/multiply.png';
 import flagicon from '@icons/flagicon.svg';
 import { useNavigate } from 'react-router-dom';
 import ConfirmationBox from '../../../components/ConfirmationBox/ConfirmationBox';
-import { toast } from 'react-toastify';
+import toast from 'react-hot-toast';
 
 const ProductsManagement = () => {
     const [searchText, setSearchText] = useState('');

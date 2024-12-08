@@ -7,7 +7,7 @@ import ConfirmationBox from '@components/ConfirmationBox/ConfirmationBox';
 import { Helmet } from 'react-helmet';
 import { formatDate } from '../../utils/common';
 import axiosWrapper from '@utils/api';
-import { toast } from 'react-toastify';
+import toast from 'react-hot-toast';
 import TextExpand from '@components/TextExpand/TextExpand';
 import editIcon from '@icons/edit.svg';
 import deleteIcon from '@icons/delete.svg';

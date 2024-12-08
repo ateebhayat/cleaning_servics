@@ -23,7 +23,7 @@ const Topbar = () => {
     const topBarString = ['Home', 'Seller', 'Fundraise'];
     const campaignsStrings = ['Add', 'Edit'];
 
-    const userProfileString = localStorage.getItem('userProfile');
+    const userProfileString = localStorage.getItem('userInfo');
     const userProfile = userProfileString ? JSON.parse(userProfileString) : null;
     return (
         <div className="top-nav">

@@ -14,14 +14,14 @@ const Profile = () => {
     // const [show, setShow] = useState(false);
     const [photo, setPhotos] = useState(null);
     const [passwordVisible, setPaswordVisible] = useState(false);
-    const userProfileString = localStorage.getItem('userProfile');
+    const userProfileString = localStorage.getItem('userInfo');
     const userProfile = userProfileString ? JSON.parse(userProfileString) : null;
 
     const initialValues = {
         password: 'Password',
         email: userProfile?.email,
         phone: '+1 (925) 612-6855',
-        name: userProfile?.email?.split('@')[0]
+        name: userProfile?.userName
     };
 
     const validationSchema = Yup.object().shape({

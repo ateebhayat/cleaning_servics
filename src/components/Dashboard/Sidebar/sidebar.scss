@@ -204,8 +204,9 @@
 }
 
 .sidebar.chat-sidebar .side-nav-wrapper {
-    width: 100%;padding-bottom: 15px !important;
-        height: calc(100vh - 0px);
+    width: 100%;
+    padding-bottom: 15px !important;
+    height: calc(100vh - 0px);
 }
 
 .sidebar.chat-sidebar .side-nav-wrapper .sidebar-nav-items .active-item {
@@ -226,7 +227,7 @@
 }
 
 .sidebar.chat-sidebar .container {
-    padding: 100px 0 10px 0;
+    padding: 10px;
 }
 
 .sidebar.chat-sidebar .side-nav-wrapper .sidebar-nav-items a .side-nav-icon {
@@ -352,7 +353,7 @@
 
 .chat-main .main-panel {
     background-color: #efefef;
-    height: 100%;
+    height: 50%
 }
 
 .message-field input.search-input.w-full.form-control {
@@ -490,4 +491,3 @@ button.logout.btn.btn-primary {
     top: -11px !important;
     padding-top: 11px;
 }
-

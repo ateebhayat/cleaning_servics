@@ -15,9 +15,13 @@ const Hero = () => {
         <>
             <div className="hero-bg">
                 <Container className="hero-section">
-                    <h3>Give hope for Unfortunates</h3>
-                    <h1>Helping each other can make world better</h1>
-                    <p>We seek out world changers and difference makers around the globe,and equip them to fulfill their unique purpose.</p>
+                    {/* <h3>Give hope for Unfortunates</h3> */}
+                    <h1>The Loyalty Card your customers will actually use</h1>
+                    <p>
+                    Getting Customers to return to your business can be an impossible task. FLIKCLUB Loyalty is the app that incentivises one-time buyers to become customers for life.
+
+
+                    </p>
                     <div className="btn-container">
                         <button type="button" onClick={handleLoginModal}>
                             Browse Listings

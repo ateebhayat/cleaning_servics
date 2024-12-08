@@ -6,7 +6,7 @@ import { Column } from 'primereact/column';
 import '../admin.scss';
 import trash from '@icons/trash.svg';
 import view from '@icons/eye.png';
-import { toast } from 'react-toastify';
+import toast from 'react-hot-toast';
 import { DataTable } from 'primereact/datatable';
 import { Products } from './Data';
 import { Row, Col, Button } from 'react-bootstrap';

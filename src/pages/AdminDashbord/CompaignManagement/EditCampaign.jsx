@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { Row, Col } from 'react-bootstrap';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import productMain from '@images/product-detail-main.png';
-import { toast } from 'react-toastify';
+import toast from 'react-hot-toast';
 
 import '../admin.scss';
 import { Button } from 'primereact/button';

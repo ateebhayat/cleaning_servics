@@ -8,12 +8,10 @@ import send from '@images/send-message.png';
 import fileUpload from '@images/attachment.png';
 import { Button } from 'react-bootstrap';
 import MessageSection from './MessageSection';
-import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 const ChatSection = () => {
     const dispatch = useDispatch();
-    const navigate = useNavigate();
     const collapsed = useSelector((state) => state.theme.collapsed);
     const autoCollapsed = useSelector((state) => state.theme.autoCollapsed);
     const [message, setMessage] = useState('');
@@ -90,12 +88,6 @@ const ChatSection = () => {
         scrollToBottomOfSection();
         setMessage('');
     };
-    // @todo
-    // const handleRemove = (index) => {
-    //     const newPhotos = [...photos];
-    //     newPhotos.splice(index, 1);
-    //     setPhotos(newPhotos);
-    // };
 
     return (
         <div className={`main-panel ${collapsed || autoCollapsed ? 'full-width-panel' : ''}`}>
@@ -107,19 +99,6 @@ const ChatSection = () => {
                     @TODO
                     
                     <img src={close} alt="user" className="close-top-user" /> */}
-                </div>
-
-                <div className="product-top-card mt-2">
-                    <div>
-                        <img src={art} alt="user" />
-                    </div>
-                    <div className="ms-3">
-                        <p className="">Apple Watch %2Mkv</p>
-                        <h6>$176.00</h6>
-                    </div>
-                    <Button className="view-ad" onClick={() => navigate('/product/1')}>
-                        View Ad
-                    </Button>
                 </div>
             </div>
             <div className="chat-block">
