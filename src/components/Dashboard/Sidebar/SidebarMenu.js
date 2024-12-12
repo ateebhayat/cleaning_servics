@@ -5,6 +5,6 @@ export const sideBarBuyItems = [
     id: 2,
     name: 'Services Listing',
     iconLight: marketing,
-    linkTo: '/services/shop_listing'
+    linkTo: '/services'
   }
 ];
