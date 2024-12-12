@@ -4,7 +4,6 @@ import { Row, Col } from 'react-bootstrap';
 import search from '@images/search.svg';
 import Form from 'react-bootstrap/Form';
 import './service.scss';
-import trash from '@icons/trash.svg';
 import { DataGrid, GridActionsCellItem } from '@mui/x-data-grid'; // Import DataGrid from Material UI
 import Card from '../../../components/Card/Card';
 import { useNavigate } from 'react-router-dom';
@@ -47,7 +46,6 @@ const ShopsListing = () => {
       headerName: 'Actions',
       type: 'actions',
       getActions: (params) => {
-        console.log('params', params);
         return [
           <GridActionsCellItem
             key={`${params.id}-remove`}
@@ -65,7 +63,6 @@ const ShopsListing = () => {
             onClick={() => {
               deleteCampaign({ id: params.id });
             }}
-            icon={<img src={trash} alt="delete" width={'20px'} className="cursor-pointer" />}
           />
         ];
       },
