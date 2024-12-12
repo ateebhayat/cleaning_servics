@@ -1,6 +1,6 @@
 /* eslint-disable react/no-multi-comp */
 import React, { useState } from 'react';
-import { Modal, Form, Row, Col, Spinner } from 'react-bootstrap';
+import { Modal, Row, Col, Spinner } from 'react-bootstrap';
 import './authmodal.scss';
 import { Form as FormikForm, Formik } from 'formik';
 
@@ -17,7 +17,7 @@ const AuthModal = ({ showLoginModal, handleLoginModal, setShowLoginModal, authus
   const [showConfirmPassword, setShowConfirmPassword] = useState(true);
   const [showForgotPassword, setShowForgotPassword] = useState(false);
   const { mutateAsync: login } = useLogin();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleForgotPass = () => {
     setShowForgotPassword(true);
@@ -62,12 +62,11 @@ const AuthModal = ({ showLoginModal, handleLoginModal, setShowLoginModal, authus
 
       setSubmitting(false);
       setShowLoginModal(false);
-      navigate('/services')
+      navigate('/services');
     } catch (error) {
       setSubmitting(false);
       setShowLoginModal(false);
     }
-    
   };
 
   return (

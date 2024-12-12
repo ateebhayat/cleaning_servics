@@ -1,9 +1,10 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import useAuth from '../hooks/use-auth';
 import axiosWrapper from '../utils/api';
 
 export const loginUser = async ({ email, password }) => {
   try {
-    const { data } = await axiosWrapper('post', `${import.meta.env.VITE_API_URL}/api/user/business/login`, { email, password });
+    const { data } = await axiosWrapper('post', `${import.meta.env.VITE_API_URL}/api/user/login`, { email, password });
     return data;
   } catch (error) {
     console.error('Error logging in user:', error);

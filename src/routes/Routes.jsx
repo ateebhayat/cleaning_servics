@@ -20,7 +20,7 @@ const MainRoutes = () => {
       </Route>
 
       {/* Protected Routes for Seller */}
-      <Route element={<ProtectedRoute  />}>
+      <Route element={<ProtectedRoute />}>
         <Route path="/" element={<DashboardLayout />}>
           <Route path="/services" exact element={<SellerDashboard />} />
           <Route path="/services/shop_listing" exact element={<ShopsListing />} />
