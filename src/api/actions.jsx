@@ -42,12 +42,13 @@ export const getServices = async (userId) => {
   }
 };
 
-export const verifyOtp = async ({ otp }) => {
+export const deleteService = async (id) => {
   try {
-    const { data } = await axiosWrapper('put', `${import.meta.env.VITE_API_URL}/api/user/verify/otp`, { otp });
+    const { token } = useAuth();
+    const { data } = await axiosWrapper('delete', `${import.meta.env.VITE_API_URL}/api/service/delete/${id}`, {}, token);
     return data;
   } catch (error) {
-    console.error('Error verifying:', error);
+    console.error('Error creating shop:', error);
     throw error; // Throw error to be handled by the calling function
   }
 };

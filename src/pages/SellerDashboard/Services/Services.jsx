@@ -14,22 +14,28 @@ import toast from 'react-hot-toast';
 import useShops from '../../../api/hooks/use-get-shops';
 import { Box } from '@mui/material';
 import useAuth from '../../../hooks/use-auth';
+import useDeleteService from '../../../api/hooks/use-delete-service';
 
 const ShopsListing = () => {
   const [searchText, setSearchText] = useState('');
   const { user } = useAuth();
   const { data: shops } = useShops(user?._id);
   const navigate = useNavigate();
-
+  const { mutate: deleteService, isError } = useDeleteService();
   const [showDialog, setDialog] = useState(false);
 
   const handleDialogClose = () => {
     setDialog(false);
   };
 
-  const deleteCampaign = () => {
-    toast.success('Campaign deleted successfully');
-    setDialog(false);
+  const deleteCampaign = async ({ id }) => {
+    await deleteService({
+      id: id
+    });
+    if (!isError) {
+      toast.success('service deleted successfully');
+      window.location.reload();
+    }
   };
 
   const columns = [
@@ -52,16 +58,9 @@ const ShopsListing = () => {
           <GridActionsCellItem
             key={`${params.id}-remove`}
             showInMenu
-            icon={
-              <img
-                src={view}
-                alt="view"
-                width={'20px'}
-                className="cursor-pointer"
-                onClick={() => navigate(`/services/${params.id}`, { state: { product: params } })}
-              />
-            }
+            icon={<img src={view} alt="view" width={'20px'} className="cursor-pointer" />}
             label={'View'}
+            onClick={() => navigate(`/services/adpost?${params.id}`, { state: { product: params } })}
             sx={{
               borderRadius: '6px'
             }}
@@ -70,7 +69,10 @@ const ShopsListing = () => {
             key={`${params.id}-edit`}
             showInMenu
             label={'Remove'}
-            icon={<img src={trash} alt="delete" width={'20px'} className="cursor-pointer" onClick={() => toast.success('Deleted')} />}
+            onClick={() => {
+              deleteCampaign({ id: params.id });
+            }}
+            icon={<img src={trash} alt="delete" width={'20px'} className="cursor-pointer" />}
           />
         ];
       },
