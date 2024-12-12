@@ -101,7 +101,7 @@ const ShopsListing = () => {
               </Col>
               <Col xs={12} md={4} sm={6} lg={3} xl={2} className="add-btn spacer-tabs">
                 <button type="button" onClick={() => navigate('/services/adpost')}>
-                  Add new Shop
+                  Add new Service
                 </button>
               </Col>
             </Row>
