@@ -33,15 +33,7 @@
     "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
     "no-unused-vars": ["error", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^React$" }],
     "eqeqeq": "error",
-    "camelcase": [
-      "error",
-      {
-        "properties": "always",
-        "ignoreGlobals": true,
-        "ignoreImports": true,
-        "allow": ["^VAR_[A-Z_]+$"]
-      }
-    ],
+
     "react/no-multi-comp": ["error"],
     "react/no-unescaped-entities": "off",
     "react/no-unstable-nested-components": ["error"],

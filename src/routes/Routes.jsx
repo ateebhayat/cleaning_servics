@@ -5,7 +5,6 @@ import PublicLayout from '@layout/PublicLayout/PublicLayout';
 import ProtectedRoute from './ProtectedRoute'; // Import the ProtectedRoute component
 
 const Profile = lazy(() => import('@pages/Profile/Profile'));
-const SellerDashboard = lazy(() => import('@pages/SellerDashboard/Home/Home'));
 const AdPosting = lazy(() => import('@pages/SellerDashboard/AdPosting/AdPosting'));
 
 const LandingPage = lazy(() => import('@pages/LandingPage/LandingPage'));
@@ -22,7 +21,6 @@ const MainRoutes = () => {
       {/* Protected Routes for Seller */}
       <Route element={<ProtectedRoute />}>
         <Route path="/" element={<DashboardLayout />}>
-          <Route path="/services" exact element={<SellerDashboard />} />
           <Route path="/services/shop_listing" exact element={<ShopsListing />} />
           <Route path="/services/profile" exact element={<Profile />} />
           <Route path="/services/adpost" exact element={<AdPosting />} />

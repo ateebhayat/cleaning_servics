@@ -24,7 +24,7 @@ export const registerUser = async ({ email, password, role }) => {
 export const createShop = async (body) => {
   try {
     const { token } = useAuth();
-    const { data } = await axiosWrapper('post', `${import.meta.env.VITE_API_URL}/api/shop`, body, token);
+    const { data } = await axiosWrapper('post', `${import.meta.env.VITE_API_URL}/api/service`, body, token);
     return data;
   } catch (error) {
     console.error('Error creating shop:', error);
