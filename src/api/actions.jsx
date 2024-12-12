@@ -31,10 +31,10 @@ export const createShop = async (body) => {
     throw error; // Throw error to be handled by the calling function
   }
 };
-export const getShops = async (userId) => {
+export const getServices = async (userId) => {
   try {
     const { token } = useAuth();
-    const { data } = await axiosWrapper('get', `${import.meta.env.VITE_API_URL}/api/shop?userId=${userId}`, false, token);
+    const { data } = await axiosWrapper('get', `${import.meta.env.VITE_API_URL}/api/service?userId=${userId}`, false, token);
     return data;
   } catch (error) {
     console.error('Error fetching shop:', error);

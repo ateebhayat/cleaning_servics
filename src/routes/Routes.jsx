@@ -6,9 +6,9 @@ import ProtectedRoute from './ProtectedRoute'; // Import the ProtectedRoute comp
 
 const Profile = lazy(() => import('@pages/Profile/Profile'));
 const AdPosting = lazy(() => import('@pages/SellerDashboard/AdPosting/AdPosting'));
+const ServicesListing = lazy(() => import('@pages/SellerDashboard/Services/Services'));
 
 const LandingPage = lazy(() => import('@pages/LandingPage/LandingPage'));
-const ShopsListing = lazy(() => import('@pages/FundraiseDashboard/Campaigns/ShopsListing'));
 const NotFound = lazy(() => import('@pages/NotFound/NotFound'));
 
 const MainRoutes = () => {
@@ -21,7 +21,7 @@ const MainRoutes = () => {
       {/* Protected Routes for Seller */}
       <Route element={<ProtectedRoute />}>
         <Route path="/" element={<DashboardLayout />}>
-          <Route path="/services/shop_listing" exact element={<ShopsListing />} />
+          <Route path="/services" exact element={<ServicesListing />} />
           <Route path="/services/profile" exact element={<Profile />} />
           <Route path="/services/adpost" exact element={<AdPosting />} />
         </Route>
