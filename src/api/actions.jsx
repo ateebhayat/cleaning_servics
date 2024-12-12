@@ -52,3 +52,13 @@ export const deleteService = async (id) => {
     throw error; // Throw error to be handled by the calling function
   }
 };
+export const getService = async (id) => {
+  try {
+    const { token } = useAuth();
+    const { data } = await axiosWrapper('get', `${import.meta.env.VITE_API_URL}/api/service/${id}`, false, token);
+    return data;
+  } catch (error) {
+    console.error('Error fetching shop:', error);
+    throw error; // Throw error to be handled by the calling function
+  }
+};

@@ -54,7 +54,7 @@ const AdPosting = () => {
             <h3>Your Service is created is successfully</h3>
 
             <div className="my-3 d-flex justify-content-center">
-              <Link to={'/seller/shop_listing'}>
+              <Link to={'/services'}>
                 <Button className="goto me-2">GOT TO HOME PAGE</Button>
               </Link>
             </div>
@@ -79,7 +79,6 @@ const AdPosting = () => {
           >
             {({ handleChange, values, errors, handleSubmit }) => (
               <Form noValidate onSubmit={handleSubmit}>
-                {console.log('Errors:', errors)}
                 <Row className="mb-3">
                   <Form.Group as={Col} md="12" controlId="validationFormikproductTitle">
                     <Form.Label>Service Title</Form.Label>

@@ -2,18 +2,14 @@
 import React, { useEffect, useState } from 'react';
 import logo from '@public/fk-logo.png';
 import './header.scss';
-import { Nav, Navbar } from 'react-bootstrap';
-import { PersonIcon, Search } from '../Icons/icons';
+import { Navbar } from 'react-bootstrap';
+import { PersonIcon } from '../Icons/icons';
 import AuthModal from '../Auth/AuthModal';
 import _ from 'lodash';
-import { useNavigate } from 'react-router-dom';
 import { Button } from '@mui/material';
 const Header = () => {
   const [showLoginModal, setShowLoginModal] = useState(false);
-  const [showSearchBar, setShowSearchBar] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const navigate = useNavigate();
-  const handleSearchBar = () => setShowSearchBar(!showSearchBar);
   const [small, setSmall] = useState(false);
 
   const [authuser, setAuthUser] = useState('');
@@ -64,46 +60,19 @@ const Header = () => {
       <Navbar expand="lg" className="header" sticky="top" id={scrolled && 'headerscrolled'}>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="">
-            {!showSearchBar && (
-              <>
-                <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="/about-us">About</Nav.Link>
-                <Nav.Link href="/for-customers">For App Users</Nav.Link>
-                {/* <Nav.Link href="/products">Products</Nav.Link> */}
-                {/* <Nav.Link href="/wishlist">Wishlist</Nav.Link> */}
-
-                {small && (
-                  <>
-                    <Nav.Link href="/products">Browse Listings</Nav.Link>
-                    <Nav.Link href="#" onClick={() => handleLoginModal('Buy')}>
-                      List Your Items
-                    </Nav.Link>
-                    <Nav.Link href="#" onClick={() => handleLoginModal('Fundraiser')}>
-                      Start A Cause
-                    </Nav.Link>
-                    <Nav.Link href="#" onClick={() => handleLoginModal('Login')}>
-                      Login
-                    </Nav.Link>
-                  </>
-                )}
-              </>
-            )}
-            
-          </Nav>
           <Navbar.Brand
             href="/"
             className="nav-brand"
             // @TODO id={ scrolled && 'headerscrolled' }
           >
-            <img src={logo} alt="app-logo" />
+            Cleaning Services
             {/* @TODO */}
           </Navbar.Brand>
           {!small && (
             <div className="login-buttons">
               <Button type="button" className="login-btn" onClick={() => handleLoginModal('Fundraiser')}>
                 <PersonIcon />
-                <span className="login-text">Sign up to FlikClub!</span>
+                <span className="login-text">Sign up to Cleaning!</span>
               </Button>
               <Button type="button" className="login-btn" onClick={() => handleLoginModal('Login')}>
                 <PersonIcon />
@@ -117,7 +86,7 @@ const Header = () => {
         <img src={logo} alt="app-logo" />
       </Navbar.Brand>
       {showLoginModal && (
-        <AuthModal setShowLoginModal={setShowLoginModal} authuser={authuser} showLoginModal={showLoginModal} handleLoginModal={handleLoginModal}  />
+        <AuthModal setShowLoginModal={setShowLoginModal} authuser={authuser} showLoginModal={showLoginModal} handleLoginModal={handleLoginModal} />
       )}
     </>
   );

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Button, Container, Nav } from 'react-bootstrap';
 import './sidebar.scss';
 import { useNavigate } from 'react-router-dom';
-import logoImg from '@public/fk-logo.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
@@ -85,14 +84,7 @@ const Sidebar = () => {
 
       <Container>
         <div className="brand-logo">
-          <img
-            src={logoImg}
-            alt="brand-logo"
-            style={{
-              cursor: 'pointer'
-            }}
-            onClick={() => navigate('/')}
-          />
+          <h5 className="mt-2">Cleaning Services</h5>
         </div>
         <div className="side-nav-wrapper">
           <Nav defaultActiveKey="/" className="sidebar-nav-items">

@@ -5,11 +5,9 @@ import search from '@images/search.svg';
 import Form from 'react-bootstrap/Form';
 import './service.scss';
 import trash from '@icons/trash.svg';
-import view from '@icons/eye.png';
 import { DataGrid, GridActionsCellItem } from '@mui/x-data-grid'; // Import DataGrid from Material UI
 import Card from '../../../components/Card/Card';
 import { useNavigate } from 'react-router-dom';
-import ConfirmationBox from '../../../components/ConfirmationBox/ConfirmationBox';
 import toast from 'react-hot-toast';
 import useShops from '../../../api/hooks/use-get-shops';
 import { Box } from '@mui/material';
@@ -22,11 +20,6 @@ const ShopsListing = () => {
   const { data: shops } = useShops(user?._id);
   const navigate = useNavigate();
   const { mutate: deleteService, isError } = useDeleteService();
-  const [showDialog, setDialog] = useState(false);
-
-  const handleDialogClose = () => {
-    setDialog(false);
-  };
 
   const deleteCampaign = async ({ id }) => {
     await deleteService({
@@ -54,13 +47,13 @@ const ShopsListing = () => {
       headerName: 'Actions',
       type: 'actions',
       getActions: (params) => {
+        console.log('params', params);
         return [
           <GridActionsCellItem
             key={`${params.id}-remove`}
             showInMenu
-            icon={<img src={view} alt="view" width={'20px'} className="cursor-pointer" />}
             label={'View'}
-            onClick={() => navigate(`/services/adpost?${params.id}`, { state: { product: params } })}
+            onClick={() => navigate(`/services/${params.id}`)}
             sx={{
               borderRadius: '6px'
             }}
@@ -110,7 +103,7 @@ const ShopsListing = () => {
                 </div>
               </Col>
               <Col xs={12} md={4} sm={6} lg={3} xl={2} className="add-btn spacer-tabs">
-                <button type="button" onClick={() => navigate('/seller/adpost')}>
+                <button type="button" onClick={() => navigate('/services/adpost')}>
                   Add new Shop
                 </button>
               </Col>
@@ -146,15 +139,6 @@ const ShopsListing = () => {
           </div>
         </div>
       </Card>
-      {showDialog && (
-        <ConfirmationBox
-          show={showDialog}
-          onClose={handleDialogClose}
-          onConfirm={deleteCampaign}
-          stitle="Delete Service"
-          body="Are you sure you want to delete this service?"
-        />
-      )}
     </React.Fragment>
   );
 };
