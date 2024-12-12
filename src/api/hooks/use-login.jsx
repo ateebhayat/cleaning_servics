@@ -6,7 +6,6 @@ const useLogin = () => {
     mutationFn: async ({ email, password }) => {
       try {
         const user = await loginUser({ email, password });
-        user.user.userType = user.user.role.toLowerCase();
         localStorage.setItem('userInfo', JSON.stringify(user.user));
         localStorage.setItem('token', user.token);
       } catch (err) {
