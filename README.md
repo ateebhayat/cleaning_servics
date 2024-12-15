@@ -75,16 +75,6 @@ We welcome contributions from developers of all experience levels! If you’d li
 
 For major changes, it's recommended to open an issue first to discuss the proposed improvements. Your contributions are greatly appreciated and help make this project even better for the community.
 
-## Support
-
-If you encounter any issues while setting up or using the project, feel free to reach out. You can:
-
-- Open a GitHub issue to report bugs or request new features.
-- Email us at **support@projectemail.com** for technical assistance.
-- Refer to the [official documentation](https://vitejs.dev/) for Vite-related queries.
-
-We’re here to help you succeed with this project!
-
 ## Conclusion
 
 That's it! You have successfully set up our React Vite project on your local machine. Whether you're building something simple or a full-scale production app, this project provides a solid foundation. If you encounter any issues or have any questions, don't hesitate to reach out to us for assistance.
